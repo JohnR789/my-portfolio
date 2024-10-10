@@ -1,14 +1,21 @@
-// components/Contact.js
-import { useForm } from 'react-hook-form'
+// src/components/Contact.tsx
+import React from '@/components/Contact';
+import { useForm, SubmitHandler } from 'react-hook-form';
 
-export default function Contact() {
-  const { register, handleSubmit, reset } = useForm()
+interface FormValues {
+  name: string;
+  email: string;
+  message: string;
+}
 
-  const onSubmit = data => {
+const Contact: React.FC = () => {
+  const { register, handleSubmit, reset } = useForm<FormValues>();
+
+  const onSubmit: SubmitHandler<FormValues> = (data) => {
     // Handle form submission (e.g., send email)
-    console.log(data)
-    reset()
-  }
+    console.log(data);
+    reset();
+  };
 
   return (
     <section id="contact" className="container mx-auto py-20">
@@ -35,7 +42,7 @@ export default function Contact() {
           <textarea
             {...register('message', { required: true })}
             className="w-full p-2 border border-gray-300 rounded"
-            rows="5"
+            rows={5}
           ></textarea>
         </div>
         <button
@@ -46,5 +53,8 @@ export default function Contact() {
         </button>
       </form>
     </section>
-  )
-}
+  );
+};
+
+export default Contact;
+
