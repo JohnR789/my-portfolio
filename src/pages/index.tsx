@@ -1,21 +1,27 @@
-// src/pages/index.tsx
-import React from 'react';
-import Layout from '@/components/Layout';
-import Hero from '@/components/Hero';
-import Projects from '@/components/Projects';
-import About from '@/components/About';
-import Contact from '@/components/Contact';
+import Hero from '../components/Hero';
+import About from '../components/About';
+import Projects from '../components/Projects';
+import Contact from '../components/Contact';
 
 const Home: React.FC = () => {
   return (
-    <Layout>
-      <Hero />
-      <Projects />
-      <About />
-      <Contact />
-    </Layout>
+    <>
+      <Hero />      {/* Hero section at the top to introduce the portfolio */}
+      <About />     {/* About section describing the developer */}
+      <Projects />  {/* Section showcasing featured projects */}
+      <Contact />   {/* Contact section to allow communication */}
+    </>
   );
 };
 
 export default Home;
+
+
+
+
+
+
+
+
+
 

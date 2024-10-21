@@ -1,6 +1,90 @@
-/* src/styles/globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* You can add custom global styles here */
+/* Ensure the full height of the page is covered */
+html, body {
+  height: 100%; /* Ensure full height */
+  min-height: 100vh; /* Ensure it covers at least the viewport height */
+  background-color: #f3f4f6; /* Light mode background */
+  @apply dark:bg-gray-900; /* Dark mode background */
+  margin: 0; /* Reset margins */
+  padding: 0; /* Reset padding */
+}
+
+/* Ensure body background covers everything, including dark mode */
+body {
+  font-family: 'Inter', sans-serif; /* Global font */
+  color: #333; /* Default text color */
+  background: linear-gradient(135deg, #ebf8ff, #dbeafe); /* Light gradient */
+  @apply dark:bg-gray-900 dark:text-white; /* Dark mode adaptation */
+}
+
+/* Ensure sections also inherit the background */
+section {
+  background-color: #f0f4f8; /* Light background for sections */
+  padding: 2rem 0; /* Section padding */
+  border-radius: 0.5rem; /* Rounded corners */
+  @apply dark:bg-gray-800; /* Dark mode section background */
+}
+
+/* Other styles remain unchanged */
+.navbar, .footer {
+  background-color: #3182ce; /* Light blue for navbar/footer background */
+  color: rgb(167, 22, 22); /* Text color */
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  @apply dark:bg-primary-dark dark:text-white; /* Dark mode for navbar/footer */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2b6cb0; /* Blue headings */
+  font-weight: 700;
+  @apply dark:text-white; /* Dark mode headings */
+}
+
+a {
+  color: #3182ce; /* Link color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+  @apply dark:text-white; /* Dark mode link color */
+}
+
+button {
+  background-color: #3182ce;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
+  @apply dark:bg-primary-dark dark:text-white;
+}
+
+button:hover {
+  background-color: #2c5282;
+  @apply dark:bg-primary;
+}
+
+.project-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  @apply dark:bg-gray-800 dark:border-gray-700;
+}
+
+.project-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+  color: #2b6cb0;
+  @apply dark:text-white;
+}
+
+
+
+
+
+
+
+
+

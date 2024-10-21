@@ -1,26 +1,31 @@
 {
   "compilerOptions": {
-    "target": "ES6",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "module": "ESNext",
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "plugins": [{ "name": "next" }],
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"]
-    }
+    "target": "es5", // Ensures compatibility with older browsers
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ], // Specifies the libraries for DOM and latest JavaScript features
+    "allowJs": true, // Allows JavaScript files to be compiled
+    "skipLibCheck": true, // Skips checking of all declaration files for faster builds
+    "strict": true, // Enables strict type checking options
+    "forceConsistentCasingInFileNames": true, // Enforces consistent file name casing
+    "noEmit": true, // Prevents emitting compiled files
+    "esModuleInterop": true, // Ensures compatibility with ES module imports
+    "module": "esnext", // Uses the latest module system
+    "moduleResolution": "node", // Resolves modules in Node.js style
+    "resolveJsonModule": true, // Allows importing of .json files
+    "isolatedModules": true, // Ensures each file can be transpiled separately
+    "jsx": "preserve", // Keeps JSX as JSX in output for Next.js
+    "incremental": true // Improves build time with incremental compilation
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ], // Includes all TypeScript files for compilation
+  "exclude": [
+    "node_modules"
+  ] // Excludes node_modules for faster builds
 }
 

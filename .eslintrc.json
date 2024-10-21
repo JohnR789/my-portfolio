@@ -1,31 +1,30 @@
-// .eslintrc.json
 {
+  "parser": "@typescript-eslint/parser",  // Use the TypeScript parser for ESLint
+  "extends": [
+    "eslint:recommended",                // Apply ESLint's base recommended rules
+    "plugin:@typescript-eslint/recommended", // Apply TypeScript-specific linting rules
+    "plugin:react/recommended",          // Apply React-specific rules
+    "plugin:react-hooks/recommended",    // Apply recommended rules for React Hooks
+    "next/core-web-vitals"               // Enforce Next.js specific best practices
+  ],
+  "plugins": [
+    "@typescript-eslint",                // TypeScript plugin for ESLint
+    "react",                             // React plugin to lint JSX and React code
+    "react-hooks",                       // Ensure proper usage of React Hooks
+    "prettier"                           // Integrate Prettier for code formatting
+  ],
   "rules": {
-    "import/no-unresolved": "error",
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      {
-        "ts": "never",
-        "tsx": "never",
-        "js": "never",
-        "jsx": "never"
-      }
-    ],
-    "import/order": [
-      "error",
-      {
-        "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
-        "newlines-between": "always",
-        "alphabetize": { "order": "asc", "caseInsensitive": false }
-      }
-    ]
+    "react/react-in-jsx-scope": "off",   // Disable this rule since React is not required in scope in Next.js
+    "prettier/prettier": "error",        // Treat Prettier formatting issues as errors
+    "@typescript-eslint/explicit-module-boundary-types": "off" // Allow omitting explicit return types on functions
   },
   "settings": {
-    "import/resolver": {
-      "typescript": {}
+    "react": {
+      "version": "detect"                // Automatically detect the React version
     }
   }
 }
+
+
 
 

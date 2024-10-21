@@ -1,60 +1,32 @@
-// src/components/Contact.tsx
-import React from '@/components/Contact';
-import { useForm, SubmitHandler } from 'react-hook-form';
-
-interface FormValues {
-  name: string;
-  email: string;
-  message: string;
-}
+import React from 'react';
 
 const Contact: React.FC = () => {
-  const { register, handleSubmit, reset } = useForm<FormValues>();
-
-  const onSubmit: SubmitHandler<FormValues> = (data) => {
-    // Handle form submission (e.g., send email)
-    console.log(data);
-    reset();
-  };
-
   return (
-    <section id="contact" className="container mx-auto py-20">
-      <h2 className="text-3xl font-bold mb-6">Contact Me</h2>
-      <form onSubmit={handleSubmit(onSubmit)} className="max-w-lg">
-        <div className="mb-4">
-          <label className="block text-lg mb-2">Name</label>
-          <input
-            {...register('name', { required: true })}
-            className="w-full p-2 border border-gray-300 rounded"
-            type="text"
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-lg mb-2">Email</label>
-          <input
-            {...register('email', { required: true })}
-            className="w-full p-2 border border-gray-300 rounded"
-            type="email"
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-lg mb-2">Message</label>
-          <textarea
-            {...register('message', { required: true })}
-            className="w-full p-2 border border-gray-300 rounded"
-            rows={5}
-          ></textarea>
-        </div>
-        <button
-          type="submit"
-          className="bg-blue-500 text-white px-6 py-2 rounded"
+    <section className="bg-light-blue text-gray-800 py-12 px-6 rounded-lg shadow-lg dark:bg-gray-800 dark:text-white transition duration-300 transform hover:shadow-xl hover:scale-105 hover:bg-blue-200 dark:hover:bg-gray-700 mb-12">
+      <div className="container mx-auto text-center">
+        <h2 className="text-4xl font-extrabold mb-6 text-primary dark:text-white">Get in Touch</h2>
+        <p className="text-lg mb-6">
+          I am actively seeking new opportunities to apply my skills and grow professionally. Please feel free to reach out if you're looking for a dedicated developer or would like to discuss potential collaborations.
+        </p>
+        <a 
+          href="mailto:rollinsj789@gmail.com" 
+          className="bg-primary text-white font-bold py-3 px-8 rounded-lg transition duration-300 shadow-lg hover:scale-110 hover:bg-primary-dark hover:shadow-2xl transform hover:translate-y-2"
         >
-          Send Message
-        </button>
-      </form>
+          Contact Me
+        </a>
+      </div>
     </section>
   );
 };
 
 export default Contact;
+
+
+
+
+
+
+
+
+
 

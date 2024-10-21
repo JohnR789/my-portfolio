@@ -1,18 +1,23 @@
-// src/pages/_app.tsx
-import React from 'react';
+import '../styles/globals.css';
 import type { AppProps } from 'next/app';
-import '@/styles/globals.css';
-import { DefaultSeo } from 'next-seo';
-import SEO from '../../next-seo.config';
+import Layout from '../components/Layout';
 
-const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
+function MyApp({ Component, pageProps }: AppProps) {
+  // The Layout component wraps all the pages for consistent styling and structure.
   return (
-    <>
-      <DefaultSeo {...SEO} />
-      <Component {...pageProps} />
-    </>
+    <Layout>
+      <Component {...pageProps} /> {/* Dynamically loads the current page's content */}
+    </Layout>
   );
-};
+}
 
 export default MyApp;
+
+
+
+
+
+
+
+
 
