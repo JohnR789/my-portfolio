@@ -57,7 +57,7 @@ const Projects: React.FC = () => {
       id="projects"
       className="my-12 bg-light-blue text-gray-800 py-12 px-6 rounded-lg shadow-lg dark:bg-gray-800 dark:text-white transition duration-300 transform hover:shadow-xl hover:scale-105 hover:bg-blue-200 dark:hover:bg-gray-700 mb-12"
     >
-      <h2 className="text-4xl font-extrabold text-center text-primary dark:text-white mb-6">Featured Projects</h2>
+      <h2 className="text-4xl font-extrabold text-center text-primary dark:text-white mb-6">Personal Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {repos.map((repo) => (
           <div
