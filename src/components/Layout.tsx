@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
+import { Analytics } from "@vercel/analytics/react"; // Import Vercel Analytics
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -25,17 +26,21 @@ const Layout: React.FC<LayoutProps> = ({ children, title = "John's GitHub Portfo
         <Header /> {/* Site-wide navigation and branding */}
         
         {/* Main Content with spacing between components */}
-        <main className="flex-grow container mx-auto px-4 py-8 space-y-12"> {/* Added space between components */}
+        <main className="flex-grow container mx-auto px-4 py-8 space-y-12">
           {children}
         </main>
 
         <Footer /> {/* Footer with social links and copyright */}
       </div>
+
+      {/* Vercel Analytics */}
+      <Analytics />
     </>
   );
 };
 
 export default Layout;
+
 
 
 
