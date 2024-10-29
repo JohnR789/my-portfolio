@@ -2,52 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Ensure the full height of the page is covered */
+
 html, body {
-  height: 100%; /* Ensure full height */
-  min-height: 100vh; /* Ensure it covers at least the viewport height */
-  background-color: #f3f4f6; /* Light mode background */
-  @apply dark:bg-gray-900; /* Dark mode background */
-  margin: 0; /* Reset margins */
-  padding: 0; /* Reset padding */
+  height: 100%; 
+  min-height: 100vh; 
+  background-color: #f3f4f6; 
+  @apply dark:bg-gray-900; 
+  margin: 0; 
+  padding: 0; 
 }
 
-/* Ensure body background covers everything, including dark mode */
+
 body {
-  font-family: 'Inter', sans-serif; /* Global font */
-  color: #333; /* Default text color */
-  background: linear-gradient(135deg, #ebf8ff, #dbeafe); /* Light gradient */
-  @apply dark:bg-gray-900 dark:text-white; /* Dark mode adaptation */
+  font-family: 'Inter', sans-serif; 
+  color: #333; 
+  background: linear-gradient(135deg, #ebf8ff, #dbeafe); 
+  @apply dark:bg-gray-900 dark:text-white; 
 }
 
-/* Ensure sections also inherit the background */
+
 section {
-  background-color: #f0f4f8; /* Light background for sections */
-  padding: 2rem 0; /* Section padding */
-  border-radius: 0.5rem; /* Rounded corners */
-  @apply dark:bg-gray-800; /* Dark mode section background */
+  background-color: #f0f4f8; 
+  padding: 2rem 0; 
+  border-radius: 0.5rem; 
+  @apply dark:bg-gray-800; 
 }
 
-/* Other styles remain unchanged */
+
 .navbar, .footer {
-  background-color: #3182ce; /* Light blue for navbar/footer background */
-  color: rgb(167, 22, 22); /* Text color */
+  background-color: #3182ce; 
+  color: rgb(167, 22, 22); 
   padding: 1rem 2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  @apply dark:bg-primary-dark dark:text-white; /* Dark mode for navbar/footer */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  @apply dark:bg-primary-dark dark:text-white; 
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #2b6cb0; /* Blue headings */
+  color: #2b6cb0; 
   font-weight: 700;
-  @apply dark:text-white; /* Dark mode headings */
+  @apply dark:text-white; 
 }
 
 a {
-  color: #3182ce; /* Link color */
+  color: #3182ce; 
   text-decoration: none;
   transition: color 0.3s ease;
-  @apply dark:text-white; /* Dark mode link color */
+  @apply dark:text-white; 
 }
 
 button {
