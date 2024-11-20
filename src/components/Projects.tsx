@@ -11,7 +11,7 @@ interface Repo {
   updated_at: string;
 }
 
-const featuredRepos = ['my-portfolio', 'santas-sleigh', 'Mikeys_Mythical_Mixology', 'odin-recipes'];
+const featuredRepos = ['my-portfolio', 'santas-sleigh', 'Mikeys_Mythical_Mixology', 'odin-recipes', 'wellness_waves', 'oma-gallery-app'];
 
 const Projects: React.FC = () => {
   const [repos, setRepos] = useState<Repo[]>([]);
