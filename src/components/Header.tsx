@@ -23,7 +23,7 @@ const Header: React.FC = () => {
             </li>
             <li>
               <a
-                href="/softwaredev.pdf"
+                href="/Full-Stack-Developer-Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:bg-blue-600 font-bold text-white px-4 py-2 rounded transition duration-300 dark:text-neutral-dark dark:hover:bg-primary-light"
